@@ -2,13 +2,13 @@ import './App.css';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar'; 
 import TextFrom from './components/TextForm';
-//import About from './components/About';
+import About from './components/About';
 import React, {useState} from 'react';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route, 
-// } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route, 
+} from 'react-router-dom';
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -69,27 +69,27 @@ function App() {
 
   return (
     <div>
-      {/* <Router> */}
+      <Router>
       <Navbar title = "Wirte below to convert to upper case" mode = {mode} toggleMode = {toggleMode}/>
       <Alert alert = {alert}/>
       <button className="btn btn-primary mx-3 my-3" type="submit" style = {{backgroundColor: "white", color: "black"}} onClick={changeNum1}>light</button>
-      <button className="btn btn-primary mx-3" type="submit" style = {{backgroundColor: "yellow", color: "black"}}onClick={changeNum2}>Yellow</button>
-      <b utton className="btn btn-primary mx-3" type="submit" style = {{backgroundColor: "green"}} onClick={changeNum3}>Green</b>
-      <button className="btn btn-primary mx-3" type="submit" style = {{backgroundColor: "red"}} onClick={changeNum4}>Red</button>
-      <button className="btn btn-primary mx-3" type="submit" style = {{backgroundColor: "blue"}} onClick={changeNum5}>Blue</button>
-      <button className="btn btn-primary mx-3" type="submit" style = {{backgroundColor: "black"}} onClick={changeNum6}>balck</button>
+      <button className="btn btn-primary mx-3 my-3" type="submit" style = {{backgroundColor: "yellow", color: "black"}}onClick={changeNum2}>Yellow</button>
+      <b utton className="btn btn-primary mx-3 my-3" type="submit" style = {{backgroundColor: "green"}} onClick={changeNum3}>Green</b>
+      <button className="btn btn-primary mx-3 my-3" type="submit" style = {{backgroundColor: "red"}} onClick={changeNum4}>Red</button>
+      <button className="btn btn-primary mx-3 my-3" type="submit" style = {{backgroundColor: "blue"}} onClick={changeNum5}>Blue</button>
+      <button className="btn btn-primary mx-3 my-3" type="submit" style = {{backgroundColor: "black"}} onClick={changeNum6}>balck</button>
       <div className = "container"></div> 
       {/* <About /> */}
-      <TextFrom headling = "Enter your text below" mode = {mode} toggleMode = {toggleMode}/>
-      {/* <Switch>
+      {/* <TextFrom headling = "Enter your text below" mode = {mode} toggleMode = {toggleMode}/> */}
+      <Switch>
           <Route exact path="/about">
-            <About />
+            <About  mode = {mode} toggleMode = {toggleMode}/>
           </Route>
           <Route exact path="/">
             <TextFrom headling = "Enter your text below" mode = {mode} toggleMode = {toggleMode}/>
           </Route>
-        </Switch> */}
-      {/* </Router> */}
+        </Switch> 
+      </Router>
     </div>
   );
 }

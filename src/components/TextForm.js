@@ -33,9 +33,9 @@ export default function TextForm(props) {
       <div className="mb-3">
       <textarea className="form-control" value = {text} onChange = {handleOnChange} style ={{backgroundColor: props.mode==="dark"?"gray":"white", color: props.mode==="light"?"black":"white"}} id="myBox" rows="2"></textarea>
       </div>
-      <button className = "btn btn-primary" onClick = {handleUpClick} style ={{backgroundColor: props.mode==="dark"?"white":"black", color: props.mode==="light"?"white":"black"}}>Convert to upper</button>
-      <button className = "btn btn-primary mx-2" onClick = {handleLowClick} style ={{backgroundColor: props.mode==="dark"?"white":"black", color: props.mode==="light"?"white":"black"}}>Convert to lower</button>
-      <button className = "btn btn-primary mx-2" onClick = {handleXClick} style ={{backgroundColor: props.mode==="dark"?"white":"black", color: props.mode==="light"?"white":"black"}}>Currect</button>
+      <button className = "btn btn-primary mx-2 my-2" onClick = {handleUpClick} style ={{backgroundColor: props.mode==="dark"?"white":"black", color: props.mode==="light"?"white":"black"}}>Convert to upper</button>
+      <button className = "btn btn-primary mx-2 my-2" onClick = {handleLowClick} style ={{backgroundColor: props.mode==="dark"?"white":"black", color: props.mode==="light"?"white":"black"}}>Convert to lower</button>
+      <button className = "btn btn-primary mx-2 my-2" onClick = {handleXClick} style ={{backgroundColor: props.mode==="dark"?"white":"black", color: props.mode==="light"?"white":"black"}}>Currect</button>
     </div>
     <div className = "container my-2" style ={{color: props.mode==="light"?"black":"white"}}>
       <h1>Your Text summary</h1>
